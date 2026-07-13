@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Text-To-Speech Files
+*.onnx
+
 # C extensions
 *.so
 
