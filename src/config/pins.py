@@ -94,6 +94,13 @@ I2S_DIN = 20
 # On a Pi 5 NeoPixels are clocked out over SPI MOSI, so the ring data line
 # must be GPIO 10. See hal/buses.py.
 LED_RING_DATA = 10
+NUM_PIXELS = 12 # number of pixels on the LED Ring
+RED    = 0xFF0000
+YELLOW = 0xFFFF00
+GREEN  = 0x00FF00
+BLUE = 0x0000FF
+
+
 
 # ----------------------------------------------------------------- i2c bus
 

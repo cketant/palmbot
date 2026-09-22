@@ -5,8 +5,11 @@ from picamera2 import Picamera2 # Camera
 from time import sleep
 
 from hal.buses import Buses
-from drivers.pca9685 import Pca9685
-from drivers.vl53l0x import Vl53l0X
+from drivers.vl53l0x import VL53L0X
+from drivers.pca9685 import PCA9685
+from drivers.drv8833 import Drv8833
+from drivers.rgb_ring import RgbRing
+from config.pins import RED, BLUE, GREEN, YELLOW
 
 
 '''
@@ -32,18 +35,17 @@ picamera2 — https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf (so
 def main():
   print("Starting...")
   buses = Buses().start()
-  
-  # instantiate drivers
   # vl53l0x = Vl53l0X(buses.i2c)
-  pca9685 = Pca9685(buses.i2c)
-  pca9685.tilt()
-  sleep(2)
-  pca9685.pan()
+  # pca9685 = Pca9685(buses.i2c)
+  # drv8833 = Drv8833()
+  # drv8833.is_on(True)
+  #ring = RgbRing()
   
-  # tear down #
-  pca9685.deinit()
   
   print("Stopping...")
+  # pca9685.deinit()
+  # drv8833.is_on(False)
+  # ring.deinit()
   buses.stop()
   
 main()

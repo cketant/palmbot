@@ -14,6 +14,7 @@ MAX_PULSE = 2500
 
 
 class Pca9685():
+  """ PCA9685 custom board representing the ARDUCAM handling both Servos """
 
   def __init__(self, i2c):
     self.pca9685 = PCA9685(i2c_bus=i2c, address=I2C_ADDRESS_PCA9685)
