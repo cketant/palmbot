@@ -9,6 +9,7 @@ from drivers.vl53l0x import VL53L0X
 from drivers.pca9685 import PCA9685
 from drivers.drv8833 import Drv8833
 from drivers.rgb_ring import RgbRing
+from drivers.max17048 import Max17048
 from config.pins import RED, BLUE, GREEN, YELLOW
 
 
@@ -18,6 +19,7 @@ Adafruit CircuitPython libraries (Read the Docs):
 adafruit_pca9685 — https://docs.circuitpython.org/projects/pca9685/en/latest/api.html
 adafruit_vl53l0x — https://docs.circuitpython.org/projects/vl53l0x/en/latest/api.html
 adafruit_mpu6050 — https://docs.circuitpython.org/projects/mpu6050/en/latest/api.html
+adafruit_max1704x - https://docs.circuitpython.org/projects/max1704x/en/latest/api.html
 neopixel — https://docs.circuitpython.org/projects/neopixel/en/latest/api.html
 
 Blinka / CircuitPython core modules (board and busio come from Blinka on a Pi):
@@ -30,11 +32,14 @@ Raspberry Pi libraries:
 
 gpiozero — https://gpiozero.readthedocs.io/en/stable/api_output.html (full index: https://gpiozero.readthedocs.io/en/stable/)
 picamera2 — https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf (source/examples: https://github.com/raspberrypi/picamera2)
+
+
 '''
 
 def main():
   print("Starting...")
   buses = Buses().start()
+  # max17048 = Max17048(buses.i2c)
   # vl53l0x = Vl53l0X(buses.i2c)
   # pca9685 = Pca9685(buses.i2c)
   # drv8833 = Drv8833()

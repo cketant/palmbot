@@ -114,6 +114,7 @@ I2C_SCL = 3
 I2C_ADDRESS_VL53L0X = 0x29
 I2C_ADDRESS_MPU6050 = 0x68
 I2C_ADDRESS_PCA9685 = 0x40
+I2C_ADDRESS_MAX17048 = 0x36
 
 
 # Every GPIO this project drives, grouped by owner. Used by the collision
